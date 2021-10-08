@@ -1,0 +1,100 @@
+@import "./variable.scss";
+body,
+html,
+#app {
+  //   width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+  background-color: $color-background;
+  color: $color-text;
+  overflow: hidden;
+}
+body {
+  min-height: 100%;
+}
+
+.g-relative {
+  position: relative;
+}
+
+.slide-enter-active,
+.slide-leave-active {
+  transition: all 0.3s;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  transform: translate3d(100%, 0, 0);
+}
+
+.up-enter-active,
+.up-leave-active {
+  transition: all 0.3s;
+}
+
+.up-enter-from,
+.up-leave-to {
+  transform: translate3d(0, 100%, 0);
+}
+
+.fall-enter-active,
+.fall-leave-active {
+  transition: all 0.3s;
+}
+
+.fall-enter-from,
+.fall-leave-to {
+  transform: translate3d(0, -100%, 0);
+}
+
+.fall-enter-to,
+.fall-leave-from {
+  transform: translate3d(0, 0%, 0);
+  // transform: translate3d(0, 100%, 0);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.4s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  // transform: translate3d(0, 100%, 0);
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+  // transform: translate3d(0, 100%, 0);
+}
+
+.song-list {
+  .loading {
+    top: 10px !important;
+  }
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+// .user {
+//   .UserSlide-enter-active,
+//   .UserSlide-leave-active {
+//     transition: all 0.3s;
+//   }
+
+//   .UserSlide-enter-from,
+//   .UserSlide-leave-to {
+//     transform: translate3d(100%, 0, 0);
+//   }
+// }

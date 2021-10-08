@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="aa">aaaa</div>
+    <script>
+        // let aa = document.querySelector('.aa');
+        // aa.addEventListener('touch')
+        async function alg() {
+            return new Promise((r, e) => {
+                e('ERR')
+            })
+        }
+        async function bbb() {
+            let bb = await alg().catch(err => {
+                return { catch: true }
+            })
+            setTimeout(() => {
+                console.log(bb);
+            }, 500);
+        }
+        bbb();
+        console.log([11, 22, 33].concat(33, 22, 11));
+    </script>
+</body>
+
+</html>
